@@ -1,0 +1,47 @@
+{
+  "type": "module",
+  "name": "@lens-ui/react",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/types/index.d.ts",
+      "require": "./dist/cjs/types/index.js",
+      "import": "./dist/esm/types/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@ark-ui/react": "^5.18.4",
+    "@ladle/react": "^5.0.3",
+    "@phosphor-icons/react": "^2.1.10",
+    "@types/bun": "^1.2.23",
+    "motion": "^12.23.24",
+    "react-hook-form": "^7.62.0",
+    "@lens-ui/config": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "^5",
+    "@pandacss/dev": "^1.4.3",
+    "@types/react": "^19.2.2",
+    "react": "^18.0.0 || ^19.0.0",
+    "@types/react-dom": "^19.2.2",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "bun run build.ts",
+    "ladle": "ladle serve",
+    "ladle:build": "ladle build",
+    "prepare": "panda codegen",
+    "ladle:preview": "ladle preview",
+    "ladle:dev": "ladle dev"
+  }
+}
